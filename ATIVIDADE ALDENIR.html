@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim</title>
+    <!-- Ícones gratuitos -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+
+    <style>
+        /* --- SEU CSS (ESTILO E CENTRALIZAÇÃO) --- */
+        :root {
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --accent-color: #007acc;
+            --badge-bg: #e1f0fa;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent-color: #4dabf7;
+            --badge-bg: #2b3a42;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Centraliza verticalmente */
+            align-items: center;
+            /* Centraliza horizontalmente */
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Fixa o botão no topo para não atrapalhar a centralização do card */
+        header {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        #theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--accent-color);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 40px;
+            /* Espaço para o botão flutuante */
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .profile-card {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .profile-card h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .profile-card h2 {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            font-size: 1.4rem;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .content-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .about-text p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .skills {
+            margin-top: 25px;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-badge {
+            background-color: var(--badge-bg);
+            color: var(--accent-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+
+            .profile-card {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .content-section {
+                flex: 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <button id="theme-toggle" aria-label="Alternar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <main class="container">
+        <section class="profile-card">
+            <!-- Substitua o link abaixo pelo caminho da sua foto se quiser -->
+            <img src="https://placeholder.com" alt="Sua Foto de Perfil" class="profile-img">
+            <h1>Aldenir</h1>
+            <h2>Estudante / Profissão</h2>
+
+            <div class="social-links">
+                <a href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="about-text">
+                <h3>Sobre Mim</h3>
+                <p>Olá! Seja bem-vindo ao meu espaço. Sou um entusiasta da tecnologia focado em criar soluções digitais
+                    limpas, eficientes e totalmente acessíveis. Adoro transformar problemas complexos em interfaces
+                    simples e intuitivas.</p>
+                <p>No meu tempo livre, gosto de estudar novas tecnologias, contribuir com projetos código aberto e ler
+                    sobre design de interface.</p>
+            </div>
+
+            <div class="skills">
+                <h3>Habilidades</h3>
+                <div class="skills-grid">
+                    <span class="skill-badge">HTML5</span>
+                    <span class="skill-badge">CSS3</span>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">Design Responsivo</span>
+                    <span class="skill-badge">Git & GitHub</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        /* --- SEU JAVASCRIPT (INTERATIVIDADE DO TEMA) --- */
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const icon = themeToggleBtn.querySelector('i');
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            if (savedTheme === 'dark') {
+                icon.classList.replace('fa-moon', 'fa-sun');
+            }
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            let newTheme = 'light';
+
+            if (currentTheme !== 'dark') {
+                newTheme = 'dark';
+                icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+
+</html>
